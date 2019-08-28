@@ -53,6 +53,8 @@ public class TestActivity extends BaseActivity<TestPresenter> implements ITestVi
     Button btPBean;
     @BindView(R.id.bt_up)
     Button btUp;
+    @BindView(R.id.bt_Fragment)
+    Button bt_Fragment;
 
     TakePhoto takePhoto;
     InvokeParam invokeParam;
@@ -113,9 +115,12 @@ public class TestActivity extends BaseActivity<TestPresenter> implements ITestVi
     }
 
 
-    @OnClick({R.id.bt_g_bean, R.id.bt_g_json, R.id.bt_p_json,R.id.bt_p_bean, R.id.bt_down, R.id.bt_up})
+    @OnClick({R.id.bt_Fragment,R.id.bt_g_bean, R.id.bt_g_json, R.id.bt_p_json,R.id.bt_p_bean, R.id.bt_down, R.id.bt_up})
     public void onViewClicked(View view) {
         switch (view.getId()) {
+            case R.id.bt_Fragment:
+                IntenToActivity(HomeActivity.class); //执行
+                break;
             case R.id.bt_g_bean://get返回bean
                 Map<String, String> map1 = new HashMap<>();
                 map1.put("start","5");

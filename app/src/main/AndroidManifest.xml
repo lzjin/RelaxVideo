@@ -21,6 +21,10 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
 
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.4" />
+
         <!--<provider-->
             <!--android:name="android.support.v4.content.FileProvider"-->
             <!--android:authorities="cn.bingoogolapple.update.demo.fileprovider"-->
@@ -41,6 +45,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.TestActivity"/>
+        <activity android:name=".activity.HomeActivity"/>
     </application>
 
 </manifest>
